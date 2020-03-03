@@ -4,6 +4,7 @@ resource "aws_autoscaling_group" "master" {
 
   launch_template {
     id = aws_launch_template.master.id
+    version = "$Latest"
   }
 
   vpc_zone_identifier = aws_subnet.jenkins.*.id
