@@ -3,7 +3,7 @@ resource "aws_autoscaling_group" "master" {
   max_size = 1
 
   launch_template {
-    id = aws_launch_template.master.id
+    id      = aws_launch_template.master.id
     version = "$Latest"
   }
 
